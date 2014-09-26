@@ -1,0 +1,29 @@
+html {
+  @include font;
+  color: $lightGray;
+  overflow-y: scroll;
+}
+
+body {
+  background: url(/assets/body_bg.gif) repeat fixed;
+  margin: 0 160px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @include font;
+  text-align: center;
+}

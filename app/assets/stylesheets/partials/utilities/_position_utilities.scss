@@ -1,0 +1,23 @@
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.fix-top {
+  top: 0;
+}
+
+.pull-right {
+  right: 0;
+}
+
+.pull-left {
+  left: 0;
+}
+
+.fix-bottom {
+  bottom: 0;
+}

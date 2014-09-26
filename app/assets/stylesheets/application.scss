@@ -9,5 +9,20 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
+
+/* RESET FOR BROWSERS */
+@import "partials/universal/normalize";
+
+/* COLORS AND TYPOGRAPHY */
+@import "partials/colors";
+@import "partials/typography";
+
+/* UNIVERSAL STYLINGS */
+@import "partials/universal/application";
+
+/* UTILITIES */
+@import "partials/utilities/*";
+
+/* COMPONENT SPECIFIC STYLING */
+@import "partials/components/*";

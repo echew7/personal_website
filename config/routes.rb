@@ -1,4 +1,9 @@
 PersonalWebsite::Application.routes.draw do
+  root 'projects#home'
+  match '/project', to: 'projects#project', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/resume', to: 'static_pages#resume', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
