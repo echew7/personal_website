@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 var projectData = [
-            {title: "Flick", description: "", filter: ["Mobile Development", "Backend"], color: "#89acf0",
+            {title: "Flick", description: "", filter: ["Mobile", "Backend"], color: "#89acf0",
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Flick/default.png", 
             transitions: [
             ]}},
@@ -11,7 +11,7 @@ var projectData = [
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/transition2.png",
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/transition3.png"
             ]}},
-            {title: "Evernote", description: "", filter: ["Web Development"], color: "#5ba525", 
+            {title: "Evernote", description: "", filter: ["Web", "Frontend"], color: "#5ba525", 
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/default.png", 
             transitions: [
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/transition1.png",
@@ -22,7 +22,7 @@ var projectData = [
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/MobileLearning/default.png", 
             transitions: [
             ]}},
-            {title: "HomeBase", description: "", filter: ["Mobile Development", "Backend"], color: "#AD0000",
+            {title: "HomeBase", description: "", filter: ["Mobile", "Frontend", "Backend"], color: "#AD0000",
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/default.png", 
             transitions: [
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/transition1.png",
@@ -33,14 +33,14 @@ var projectData = [
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Dandelion/default.png", 
             transitions: [
             ]}},
-            {title: "ChewChew", description: "", filter: ["Mobile Development"], color: "#49baf3",
+            {title: "ChewChew", description: "", filter: ["Mobile", "Frontend"], color: "#49baf3",
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/default.png", 
             transitions: [
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition1.png",
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition2.png",
               "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition3.png"
             ]}},
-            {title: "Tire Generator", description: "", filter: ["Engineering"], color: "#89acf0", 
+            {title: "Tire Generator", description: "", filter: ["Extras"], color: "#89acf0", 
             pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Tire/default.png", 
             transitions: [
             ]}}
@@ -48,10 +48,11 @@ var projectData = [
 
 var filterData = [
                   {filter: "Education"},
-                  {filter: "Web Development"}, 
-                  {filter: "Mobile Development"}, 
+                  {filter: "Web"}, 
+                  {filter: "Mobile"}, 
+                  {filter: "Frontend"},
                   {filter: "Backend"}, 
-                  {filter: "Engineering"}, 
+                  {filter: "Extras"}, 
                  ];
 
 var ProjectDisplay = React.createClass({
@@ -70,6 +71,11 @@ var ProjectDisplay = React.createClass({
   },
   changeFilter: function(filter) {
     this.setState({filter: filter, summary: this.state.summary, projects: this.state.projects});
+    if (filter == "Web") {
+     $("#logo").attr('class', 'shake'); 
+    } else {
+     $("#logo").attr('class', ''); 
+    }
   },
   render: function() {
     return (
