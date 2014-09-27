@@ -24,7 +24,7 @@
       .logo-picture {
         @include circle(110px);
         @include center;
-        background-image: url(/assets/me.png);
+        background-image: url("http://web.stanford.edu/~xechew/assets/me.png");
         background-size: cover;
       }
     }
