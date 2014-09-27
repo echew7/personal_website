@@ -1,84 +1,57 @@
 /** @jsx React.DOM */
 var projectData = [
-            {title: "Boston", description: "Sexy City", filter: ["Fun", "Cool"], color: "#89acf0", 
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg", 
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "New York", description: "Dreary City", filter: ["Sexy", "Kill Me"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "Portland", description: "Hipppy City", filter: ["Hipster", "Fun"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "District of Columbia", description: "Hot City", filter: ["Kill Me"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-                          {title: "Boston", description: "Sexy City", filter: ["Fun", "Cool"], color: "#89acf0", 
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg", 
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "New York", description: "Dreary City", filter: ["Sexy", "Kill Me"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "Portland", description: "Hipppy City", filter: ["Hipster", "Fun"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "District of Columbia", description: "Hot City", filter: ["Kill Me"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "Chicago", description: "Fun City", filter: ["Fun", "Cool"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}},
-            {title: "San Francisco", description: "Techy City", filter: ["Nerdy"], color: "#89acf0",
-            pictures: {default: "https://pbs.twimg.com/profile_images/858438474/boston.jpg",
-            transitions: ["http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg",
-                          "https://media2.wnyc.org/i/620/372/c/80/photologue/photos/cities.jpg",
-                          "http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg",
-                          "http://www.dailygalaxy.com/.a/6a00d8341bf7f753ef0115712a0da1970b-pi"
-                          ]}}
+            {title: "Flick", description: "", filter: ["Mobile Development", "Backend"], color: "#89acf0",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Flick/default.png", 
+            transitions: [
+            ]}},
+            {title: "Openproof Project", description: "", filter: ["Education"], color: "#efb53e",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/default.png", 
+            transitions: [
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/transition1.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/transition2.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/OpenProof/transition3.png"
+            ]}},
+            {title: "Evernote", description: "", filter: ["Web Development"], color: "#5ba525", 
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/default.png", 
+            transitions: [
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/transition1.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/transition2.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/Evernote/transition3.png"
+            ]}},
+            {title: "Mobile Learning", description: "", filter: ["Education"], color: "#89acf0",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/MobileLearning/default.png", 
+            transitions: [
+            ]}},
+            {title: "HomeBase", description: "", filter: ["Mobile Development", "Backend"], color: "#AD0000",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/default.png", 
+            transitions: [
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/transition1.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/transition2.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/HomeBase/transition3.png"
+            ]}},
+            {title: "Dandelion School", description: "", filter: ["Education"], color: "#f3ec49",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Dandelion/default.png", 
+            transitions: [
+            ]}},
+            {title: "ChewChew", description: "", filter: ["Mobile Development"], color: "#49baf3",
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/default.png", 
+            transitions: [
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition1.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition2.png",
+              "http://web.stanford.edu/~xechew/assets/ProjectHandles/ChewChew/transition3.png"
+            ]}},
+            {title: "Tire Generator", description: "", filter: ["Engineering"], color: "#89acf0", 
+            pictures: {default: "http://web.stanford.edu/~xechew/assets/ProjectHandles/Tire/default.png", 
+            transitions: [
+            ]}}
             ];
 
 var filterData = [
-                  {filter: "Sexy"}, 
-                  {filter: "Fun"},
-                  {filter: "Nerdy"}, 
-                  {filter: "Cool"}, 
-                  {filter: "Hipster"}, 
-                  {filter: "Kill Me"}
+                  {filter: "Education"},
+                  {filter: "Web Development"}, 
+                  {filter: "Mobile Development"}, 
+                  {filter: "Backend"}, 
+                  {filter: "Engineering"}, 
                  ];
 
 var ProjectDisplay = React.createClass({
@@ -128,7 +101,7 @@ var ProjectSidebar = React.createClass({
     }
     return (
       <div className="project-sidebar">
-        <h3>Life</h3>
+        <h3>Work</h3>
         <div></div>
         <ul> 
           {projectFilters}
@@ -229,6 +202,7 @@ var transitionCounter = 0;
 var swapper;
 var PictureTransitioner = React.createClass({
   swapImage: function() {
+    if (this.props.pictures.transitions.length == 0) return;
     if (transitionCounter >= this.props.pictures.transitions.length) transitionCounter = 0;
     var imageIndex = transitionCounter;//keep i under the array length
     this.refs.picture.getDOMNode().style.backgroundImage = this.constructUrl(this.props.pictures.transitions[imageIndex]); 
@@ -247,7 +221,7 @@ var PictureTransitioner = React.createClass({
   },
   render: function() {
     var initialImage = {
-      backgroundImage: 'url(' + 'https://pbs.twimg.com/profile_images/858438474/boston.jpg' + ')',
+      backgroundImage: this.constructUrl(this.props.pictures.default)
     };
 
     return (
