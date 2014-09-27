@@ -1,0 +1,21 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius; 
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius; 
+  -o-border-radius: $radius; 
+  border-radius: $radius;
+}
+
+@mixin circle($diameter) {
+  @include border-radius(50%);
+  width: $diameter;
+  height: $diameter; 
+}
+
+@mixin scale($multiplier) {
+  -webkit-transform: scale($multiplier);
+  -moz-transform: scale($multiplier);
+  -ms-transform: scale($multiplier);
+  -o-transform: scale($multiplier);
+  transform: scale($multiplier);
+}

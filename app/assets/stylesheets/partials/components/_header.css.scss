@@ -1,34 +1,70 @@
 .navbar {
-  position: relative;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
 
   .wrapper {
-    border-bottom: 1px $darkGray solid;
     height: 50px;
+    position: relative;
+    margin: 0 200px; 
+  }
+
+  .logo-wrapper {
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 10px;
+
+    #logo {
+      @include circle(120px);  
+      background-color: white;
+      margin: 0 auto;
+
+      .logo-picture {
+        @include circle(110px);
+        @include center;
+        background-image: url(/assets/me.png);
+        background-size: cover;
+      }
+    }
+  }
+
+  .border {
+    border-top: 1px $lightGray solid;
+    margin-top: 50px;
   }
 
   nav {
     @include vertical-align;
-    margin-right: 20px;
-    float: right;
+    padding-top: 5px;
+
+    .separator {
+      display: inline-block;
+      width: 140px;
+    }
   }
 
   ul {
+    position: relative;
+    top: 0;
     list-style-type: none;
-    margin: 0;
+    margin: 0 10px;
     padding: 0;
+    display: inline-block;
+
     li {
       display: inline;
-      margin: 0 10px;
+      margin: 0 40px;
     }
   }
 
   a {
-    color: $lightGray;
+    color: $darkGray;
     text-decoration: none;
 
-    &:hover,
-    .selected {
-      color: $coolBlue;
+    &:hover {
+      color: $coolBlue; 
     }
 
   }

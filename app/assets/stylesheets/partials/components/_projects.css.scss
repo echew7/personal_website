@@ -1,0 +1,67 @@
+.project-sidebar {
+  @include vertical-align;
+  left: 50px;
+  position: fixed;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  div {
+    border-top: 1px $lightGray solid;
+    margin: 10px 0;
+    width: 20px;
+  }
+
+  ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.project-filter {
+  margin: 3px 0;
+  &:hover {
+    color: $coolBlue;
+  }
+}
+
+.project-summary {
+  @include transition(opacity, 0.5s, ease-in-out, 0);
+  @include vertical-align;
+  opacity: 0;  
+  padding: 0 10px;
+  position: fixed;
+  right: 0;
+  width: 240px;
+}
+
+.project-grid {
+  text-align: center;    
+}
+
+.project-handle {
+  @include circle(175px);
+  @include transition(background-color, 0.3s, ease-in-out, 0);
+  @include transition(transform, 0.3s, ease-in-out, 0);
+  background-color: white;
+  border: 1px $offWhite solid;
+  display: inline-block;
+  margin: 50px;
+
+  &:hover {
+    @include scale(1.25);
+    cursor: pointer;
+  }
+}
+
+.picture-transitioner {
+  @include circle(160px);
+  @include center;
+  @include transition(background-image, 0.75s, ease-in-out, 0.2s);
+  background-size: cover;
+}
+

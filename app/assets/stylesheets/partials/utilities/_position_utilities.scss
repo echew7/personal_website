@@ -2,8 +2,15 @@
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@mixin center {
+  @include vertical-align;
+  margin: 0 auto;
 }
 
 .fix-top {
@@ -20,4 +27,58 @@
 
 .fix-bottom {
   bottom: 0;
+}
+
+@mixin shake-frame-transform($translate, $rotate) {
+  -webkit-transform: $translate $rotate;
+  -moz-transform: $translate $rotate;
+  -ms-transform: $translate $rotate;
+  -o-transform: $translate $rotate;
+  transform: $translate $rotate;
+}
+
+@-webkit-keyframes shake-frames {
+  0% { @include shake-frame-transform(translate(2px, 1px), rotate(0deg)) }
+  10% { @include shake-frame-transform(translate(-1px, -2px), rotate(-1deg)) }
+  20% { @include shake-frame-transform(translate(-3px, 0px), rotate(1deg)) }
+  30% { @include shake-frame-transform(translate(0px, 2px), rotate(0deg)) }
+  40% { @include shake-frame-transform(translate(1px, -1px), rotate(1deg)) }
+  50% { @include shake-frame-transform(translate(-1px, 2px), rotate(-1deg)) }
+  60% { @include shake-frame-transform(translate(-3px, 1px), rotate(0deg)) }
+  70% { @include shake-frame-transform(translate(2px, 1px), rotate(-1deg)) }
+  80% { @include shake-frame-transform(translate(-1px, -1px), rotate(1deg)) }
+  90% { @include shake-frame-transform(translate(2px, 2px), rotate(0deg)) }
+  100% { @include shake-frame-transform(translate(1px, -2px), rotate(-1deg)) }
+}
+
+@mixin shake-animation($duration, $origin, $iteration-count, $timing-function) {
+  -webkit-animation-name: shake-frames;
+  -webkit-animation-duration: $duration;
+  -webkit-transform-origin: $origin;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-timing-function: $timing-function;
+  -moz-animation-name: shake-frames;
+  -moz-animation-duration: $duration;
+  -moz-transform-origin: $origin;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-timing-function: $timing-function;
+  -ms-animation-name: shake-frames;
+  -ms-animation-duration: $duration;
+  -ms-transform-origin: $origin;
+  -ms-animation-iteration-count: $iteration-count;
+  -ms-animation-timing-function: $timing-function;
+  -o-animation-name: shake-frames;
+  -o-animation-duration: $duration;
+  -o-transform-origin: $origin;
+  -o-animation-iteration-count: $iteration-count;
+  -o-animation-timing-function: $timing-function;
+  animation-name: shake-frames;
+  animation-duration: $duration;
+  transform-origin: $origin;
+  animation-iteration-count: $iteration-count;
+  animation-timing-function: $timing-function;
+}
+
+.shake {
+  @include shake-animation(0.8s, 50% 50%, infinite, linear);
 }

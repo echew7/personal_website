@@ -1,12 +1,24 @@
 html {
   @include font;
-  color: $lightGray;
+  color: $darkGray;
+  overflow-x: scroll;
   overflow-y: scroll;
 }
 
 body {
   background: url(/assets/body_bg.gif) repeat fixed;
-  margin: 0 160px;
+  bottom: 0;
+  left: 0;
+  padding-top: 110px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#wrapper {
+  min-height:100%;
+  margin: 0 200px; 
+  position: relative;
 }
 
 section {

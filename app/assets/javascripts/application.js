@@ -13,8 +13,9 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require jquery_ujs
 //= require turbolinks
 //= require showdown
 //= require react
-//= require_tree .
+//= require react-with-addons.min
 //= require_tree .
